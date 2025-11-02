@@ -13,42 +13,265 @@
   <link href="css/reset.css" media="all" rel="stylesheet" type="text/css">
   <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="img/icon.ico">
-  <link rel=”canonical” href=”URLが入る”>
+  <link rel="canonical" href="URLが入る">
+  
 </head>
 
 <body>
   <div class="wrapper">
 
-    <!-- .gnav -->
-    <nav class="gnav" class="fixed">
-      <ul class="gnav-list">
-        <li class="gnav-item"><a class="gnav-link" href="#graphics-section">GRAPHICS</a></li>
-        <li class="gnav-item"><a class="gnav-link" href="#movies-section">MOVIES</a></li>
-        <li class="gnav-item"><a class="gnav-link" href="#about-section">ABOUT</a></li>
-        <li class="gnav-item"><a class="gnav-link" href="#contact-section">CONTACT</a></li>
-      </ul>
+    <nav class="sticky-nav" id="sticky-nav">
+      <div class="sticky-nav-inner">
+        <a class="sticky-nav-logo" href="#hero-section">TSUBASA KAKIHARA</a>
+        <ul class="sticky-nav-list">
+          <li><a class="sticky-nav-link" href="#movies-section">Movies</a></li>
+          <li><a class="sticky-nav-link" href="#graphics-section">Graphics</a></li>
+          <li><a class="sticky-nav-link" href="#system-section">System</a></li>
+          <li><a class="sticky-nav-link" href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
     </nav>
-    <!-- /.gnav -->
 
     <!-- .header -->
-    <header class="header">
-      <h1 class="logo">
-         <!-- <div class="logo-title">PORTFOLIO</div> -->
-      </h1>
-      <div class="video-container">
-        <video autoplay muted loop playsinline id="hero-video">
-          <source src="video/portfolio_25MB_240907.mp4" type="video/mp4">
-          ブラウザがビデオをサポートしていません。
-        </video>
+    <header class="header hero" id="hero-section">
+      <div class="mondrian-wrapper">
+        <div class="mondrian-menu" id="mondrian-menu">
+          <button type="button" class="mondrian-cell cell-hero" data-cell="hero" data-target="#movies-section">
+            <div class="movies-media">
+              <video autoplay muted loop playsinline id="hero-video">
+                <source src="video/portfolio_25MB_240907.mp4" type="video/mp4">
+                ブラウザがビデオをサポートしていません。
+              </video>
+            </div>
+          </button>
+          <button type="button" class="mondrian-cell cell-movies" data-cell="movies" data-target="#movies-section">
+            MOVIES
+          </button>
+          <button type="button" class="mondrian-cell cell-graphics" data-cell="graphics" data-target="#graphics-section">
+            GRAPHICS
+          </button>
+          <button type="button" class="mondrian-cell cell-system" data-cell="system">
+            <div class="sub-system" data-target="#system-section">SYSTEM SUPPORT</div>
+            <div class="sub-contact" data-target="#contact-section">CONTACT</div>
+          </button>
+        </div>
+        <div class="hero-title-block">
+          <div class="hero-title-main">PORTFOLIO</div>
+          <div class="hero-title-sub">KAKIHARA TSUBASA</div>
+        </div>
       </div>
     </header>
     <!-- /.header -->
 
     <main class="content">
 
+      <!-- .movies-section -->
+      <section class="movies-section section section-theme-movies" id="movies-section">
+        <div class="inner section-card">
+          <div class="section-heading">
+            <h2 class="heading-primary">MOVIES</h2>
+            <p class="section-lead">映像</p>
+          </div>
+          <div class="movies-categories">
+            <button type="button" class="movies-category-button is-active" data-category="brand-theater">ブランド・シアター</button>
+            <button type="button" class="movies-category-button" data-category="signage">サイネージ・展示・短尺プロモ</button>
+            <button type="button" class="movies-category-button" data-category="corporate">会社・サービス紹介 / 業務系</button>
+            <button type="button" class="movies-category-button" data-category="vertical">縦動画（SNS・館内サイネージ）</button>
+            <button type="button" class="movies-category-button" data-category="cm">CM / スポット</button>
+          </div>
+          <div class="section-body movies">
+            <div class="movies-list js-my-gallery">
+              <figure class="movies-item" data-category="brand-theater">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QTWx20M3cd0" title="分譲マンション向けコンセプトムービー（パーク＆リンクスEST系）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">分譲マンション向けコンセプトムービー（パーク＆リンクスEST系）</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="brand-theater">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iiyZaNyxPFc" title="住宅ブランド向けブランド映像" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">住宅ブランド向けブランド映像</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="brand-theater">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o4i-tOeDlEQ" title="分譲マンション 模型室ムービー（京都円町）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">分譲マンション 模型室ムービー（京都円町）</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="brand-theater">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/36id_y6XAv4" title="大規模開発シアター用映像（駅前再開発）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">大規模開発シアター用映像（駅前再開発）</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="brand-theater">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MLT0f_7laug" title="高級レジデンスHP用ムービー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">高級レジデンスHP用ムービー</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="brand-theater">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/K0fr9ga46Tg" title="都市型マンション シアター映像" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">都市型マンション シアター映像</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="brand-theater">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KqjOBbNriJE" title="郊外型マンション シアター映像" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">郊外型マンション シアター映像</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="signage" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y0xFKj16Vkk" title="駅設置用サイネージ映像（不動産）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">駅設置用サイネージ映像（不動産）</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="signage" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YItaYFVpdjo" title="食品卸向けサイネージ動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">食品卸向けサイネージ動画</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="signage" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6f0pDbajGlc" title="食品メーカー向けサイネージ動画（縦版あり）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">食品メーカー向けサイネージ動画（縦版あり）</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="signage" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7oeJtd7IYLA" title="商業施設内サイネージ動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">商業施設内サイネージ動画</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="signage" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7e3Pwb0YQw8" title="展示会向けプロダクト紹介サイネージ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">展示会向けプロダクト紹介サイネージ</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="corporate" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FvQjalvXyEQ" title="イベント・博覧会向けPR動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">イベント・博覧会向けPR動画</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="corporate" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qGmhV9hJVLs" title="新人教育向けビジネスマナー動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">新人教育向けビジネスマナー動画</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="corporate" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4WOsPznYY7Y" title="産業機器アフターサービス動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">産業機器アフターサービス動画</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="corporate" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/f4u336gHff4" title="共済・保険サービスの仕組み説明動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">共済・保険サービスの仕組み説明動画</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="corporate" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/eefFOH-hMuo" title="介護・福祉向けロボット製品紹介" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">介護・福祉向けロボット製品紹介</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="corporate" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0GyVkUDTRKk" title="設置サービスの流れ説明動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">設置サービスの流れ説明動画</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="corporate" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dn4hQXzrOX0" title="住宅設備の広告用ショート動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">住宅設備の広告用ショート動画</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="corporate" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8g3NFF7sLUs" title="工房系ブランドのものづくり紹介ムービー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">工房系ブランドのものづくり紹介ムービー</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="vertical" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DdBLCdKHQS0" title="インスタリール広告動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">インスタリール広告動画</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="vertical" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/n-wv5rDvePc" title="ハチ食品 サイネージ動画（縦版）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">ハチ食品 サイネージ動画（縦版）</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="vertical" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7oeJtd7IYLA" title="商業施設内サイネージ動画（縦フォーマット）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">商業施設内サイネージ動画（縦フォーマット）</div>
+                </figcaption>
+              </figure>
+              <figure class="movies-item" data-category="cm" hidden>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GFz0O-8FO1o" title="都市部マンションTVCM 15秒" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <figcaption class="movies-body">
+                  <div class="movies-title">都市部マンションTVCM 15秒</div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <a class="movies-archive-link" href="#archive">過去アーカイブ（2020年以前の制作物）</a>
+        </div>
+      </section>
+      <!-- /.movie-section -->
+
+      <!-- .system-section -->
+      <section class="system-section section section-theme-system" id="system-section">
+        <div class="inner section-card">
+          <div class="section-heading">
+            <h2 class="heading-primary">SYSTEM / OPS / AI</h2>
+            <p class="section-lead">制作をまわすための仕組みづくり・資料化・AI活用</p>
+          </div>
+
+          <div class="system-grid">
+            <div class="system-card">
+              <h3>Production System Design（制作システム設計）</h3>
+              <p>効率的で安定した映像制作環境を設計・構築。ストレージ構成・権限・バックアップ運用まで一貫して整理。</p>
+            </div>
+
+            <div class="system-card">
+              <h3>社内ネットワーク最適化提案（メッシュWi-Fi化）</h3>
+              <p>現状ヒアリング→構成設計→業務/ゲストのセグメント分離→機器選定→説明資料まで担当。非エンジニアにも伝わる形でドキュメント化。</p>
+            </div>
+
+            <div class="system-card">
+              <h3>社内売上分析システム向け説明スライド</h3>
+              <p>スプレッドシート入力→集計/分析に乗せるまでの前工程を説明する資料を作成。情報構造・トーンを整えて、現場メンバーに入力を依頼しやすくしたもの。</p>
+            </div>
+
+            <div class="system-card system-card-ai">
+              <h3>DocBase連携AIボット（社内QA自動化）</h3>
+              <p>DocBaseに蓄積されたシステムトラブル・運用ノウハウを再整理し、GPTs経由でAPI取得→最適回答を返す社内向けボットとしてリリース。</p>
+              <ul class="system-list">
+                <li>記事をカテゴリ化してからAIに渡す構成</li>
+                <li>「DocBaseにあるかぎり答えられる」導線で問い合わせを削減</li>
+                <li>既存ナレッジをAIに乗せる運用を実証</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- .graphics-section -->
-      <section class="graphics-section section" id="graphics-section">
-        <div class="inner">
+      <section class="graphics-section section section-theme-graphics" id="graphics-section">
+        <div class="inner section-card">
           <div class="section-heading">
             <h2 class="heading-primary">GRAPHICS</h2>
           </div>
@@ -97,89 +320,18 @@
 
       <!-- /.graphics-section -->
 
-      <!-- .movies-section -->
-      <section class="movies-section section" id="movies-section">
-        <div class="inner">
-          <div class="section-heading">
-            <h2 class="heading-primary">MOVIES</h2>
-          </div>
-          <div class="section-body movies">
-            <div class="movies-list js-my-gallery">
-              <figure class="movies-item">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iiyZaNyxPFc?si=pQbtFz3EqH1JOlHm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-               <figcaption class="movies-body">
-                   <div class="movies-title">「ユニハイム」ブランド映像</div>
-               </figcaption>
-              </figure>
-              <figure class="movies-item">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/36id_y6XAv4?si=r3CWaStCDxseoz6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <figcaption class="movies-body">
-                  <div class="movies-title">「シエリアシティ星田駅前」 シアター映像</div>
-                </figcaption>
-              </figure>
-              <figure class="movies-item">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MLT0f_7laug?si=dAiBOxdkFLxXjgqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <figcaption class="movies-body">
-                  <div class="movies-title">「ブランズ伏見桃山」 HP映像</div>
-                </figcaption>
-              </figure>
-              <figure class="movies-item">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=_vzOZ6RZgzDYWZWs&amp;list=PLdGjTJ8W58l5VWd8CK4C0b83BxxNweYpe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <figcaption class="movies-body">
-                  <div class="movies-title">2022年〜制作物</div>
-                  <!--<p>株式会社ワンダーストラック</p>-->
-                </figcaption>
-              </figure>
-              <figure class="movies-item">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=s2qoBc-uVFIQ1KOA&amp;list=PLdGjTJ8W58l4Xo2QD0Lk63ydkHFj5IV7N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <figcaption class="movies-body">
-                  <div class="movies-title">2021年~制作物</div>
-                  <!--<p>アーツ株式会社</p>-->
-                </figcaption>
-              </figure>
-              <figure class="movies-item">
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=TndBd5m2GRyzxJWx&amp;list=PLdGjTJ8W58l6RcllmMParr1wZ0YMZUaED" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <figcaption class="movies-body">
-                  <div class="movies-title">2020年~</div>
-                  <!--<p>ポノス株式会社</p>-->
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /.movies-section -->
-
-      <!-- .about-section -->
-      <section class="about-section section" id="about-section">
-        <div class="inner">
-          <div class="section-heading">
-            <h2 class="heading-primary">ABOUT</h2>
-          </div>
-          <div class="section-body about">
-            <div class="about-item">
-              <div class="about-image-wrapper">
-                <img class="about-image" src="img/about/profile.jpg" alt="profile">
-              </div>
-              <div class="about-body">
-                <div class="about-name">TSUBASA KAKIHARA</div>
-                <p>映像制作 / グラフィックデザイン / システム管理<br></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /.about-section -->
-
       <!-- .contact-section -->
-      <section class="contact-section section" id="contact-section">
-        <div class="inner">
+      <section class="contact-section section section-theme-contact" id="contact-section">
+        <div class="inner section-card">
           <div class="section-heading">
             <h2 class="heading-primary">CONTACT</h2>
           </div>
           <div class="section-lead">
           </div>
           <div class="section-body contact">
+            <div class="contact-profile">
+              <img src="img/about/profile.jpg" alt="TSUBASA KAKIHARA">
+            </div>
             <div class="contact-text">kakihara.tsubasa@gmail.com</div>
           </div>
         </div>
@@ -214,6 +366,99 @@
     
        modal.style.display = "none";
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var mondrian = document.getElementById('mondrian-menu');
+      if (!mondrian) {
+        return;
+      }
+
+      var navCells = Array.prototype.slice.call(
+        mondrian.querySelectorAll('.mondrian-cell')
+      );
+
+      var navigateTo = function (selector) {
+        if (!selector) {
+          return;
+        }
+        var targetEl = document.querySelector(selector);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', selector);
+        } else {
+          location.hash = selector;
+        }
+      };
+
+      navCells.forEach(function (cell) {
+        cell.addEventListener('click', function (event) {
+          var targetSource = typeof event.target.closest === 'function' ? event.target.closest('[data-target]') : null;
+          if (targetSource && !cell.contains(targetSource)) {
+            targetSource = null;
+          }
+          var selector = targetSource ? targetSource.getAttribute('data-target') : cell.getAttribute('data-target');
+          if (!selector) {
+            return;
+          }
+          event.preventDefault();
+          navigateTo(selector);
+        });
+      });
+
+      var header = document.getElementById('hero-section');
+      var stickyNav = document.getElementById('sticky-nav');
+
+      if (header && stickyNav) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              stickyNav.classList.remove('is-visible');
+            } else {
+              stickyNav.classList.add('is-visible');
+            }
+          });
+        }, {
+          root: null,
+          threshold: 0,
+          rootMargin: '-120px 0px 0px 0px'
+        });
+
+        observer.observe(header);
+      }
+
+      var moviesSection = document.getElementById('movies-section');
+      if (moviesSection) {
+        var categoryButtons = Array.prototype.slice.call(
+          moviesSection.querySelectorAll('.movies-category-button')
+        );
+        var movieItems = Array.prototype.slice.call(
+          moviesSection.querySelectorAll('.movies-item')
+        );
+
+        var filterMovies = function (category) {
+          movieItems.forEach(function (item) {
+            var itemCategory = item.getAttribute('data-category');
+            item.hidden = category ? itemCategory !== category : false;
+          });
+        };
+
+        categoryButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            var targetCategory = button.getAttribute('data-category');
+            categoryButtons.forEach(function (btn) {
+              btn.classList.remove('is-active');
+            });
+            button.classList.add('is-active');
+            filterMovies(targetCategory);
+          });
+        });
+
+        var initialButton = moviesSection.querySelector('.movies-category-button.is-active') || categoryButtons[0];
+        if (initialButton) {
+          filterMovies(initialButton.getAttribute('data-category'));
+        }
+      }
+    });
 
   </script>
   <!-- /.modal -->
