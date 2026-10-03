@@ -193,6 +193,28 @@ ol {
   padding: 0;
 }
 
+.site-header.is-scroll-aware .site-nav {
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+  transition: opacity 0.24s ease, transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.site-header.is-scroll-aware.is-scrolling .site-nav,
+.site-header.is-scroll-aware:focus-within .site-nav {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (hover: hover) {
+  .site-header.is-scroll-aware .site-nav:hover {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
 .site-nav {
   position: relative;
   display: flex;
@@ -209,17 +231,6 @@ ol {
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
   pointer-events: auto;
-}
-
-.site-nav::before {
-  content: "";
-  position: absolute;
-  inset: 1px 1px auto;
-  height: 52%;
-  border-radius: inherit;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0));
-  opacity: 0.84;
-  pointer-events: none;
 }
 
 .site-nav-link {

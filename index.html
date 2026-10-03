@@ -423,6 +423,28 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+      var header = document.querySelector(".site-header");
+      var headerIdleTimer;
+
+      if (header) {
+        header.classList.add("is-scroll-aware");
+
+        window.addEventListener("scroll", function () {
+          header.classList.add("is-scrolling");
+          window.clearTimeout(headerIdleTimer);
+          headerIdleTimer = window.setTimeout(function () {
+            header.classList.remove("is-scrolling");
+          }, 800);
+        }, { passive: true });
+
+        header.addEventListener("click", function (event) {
+          var link = event.target.closest(".site-nav-link");
+          if (link && event.detail > 0) {
+            link.blur();
+          }
+        });
+      }
+
       var filterButtons = Array.prototype.slice.call(document.querySelectorAll(".works-filter-button"));
       var workItems = Array.prototype.slice.call(document.querySelectorAll(".work-item"));
 
